@@ -1,0 +1,1661 @@
+<!doctype html>
+
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Courses | Faris Altaher</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#173fcf",
+              "background-light": "#f8f6f6",
+              "background-dark": "#221610",
+              navy: "#2a3663",
+              gold: "#b59f78",
+              sage: "#d8dbbd",
+              cream: "#faf6e3",
+            },
+            fontFamily: {
+              display: ["Newsreader", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            boxShadow: {
+              premium:
+                "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+              "premium-hover": "0 30px 40px -10px rgba(42, 54, 99, 0.2)",
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              shine: "shine 2s infinite",
+            },
+            keyframes: {
+              shine: {
+                "0%": { transform: "translateX(-100%)" },
+                "100%": { transform: "translateX(100%)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Newsreader", serif;
+      }
+      .bg-navy-gradient {
+        background: linear-gradient(135deg, #2a3663 0%, #1a2240 100%);
+      }
+      .text-shadow-sm {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      @keyframes fade-up {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-up {
+        animation: fade-up 1s ease forwards;
+      }
+      .animate-fade-up.delay-200 {
+        animation-delay: 0.2s;
+      }
+      .animate-fade-up.delay-300 {
+        animation-delay: 0.3s;
+      }
+      .animate-fade-up.delay-400 {
+        animation-delay: 0.4s;
+      }
+      .animate-fade-up.delay-500 {
+        animation-delay: 0.5s;
+      }
+      @keyframes gentle-bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+      .animate-gentle-bounce {
+        animation: gentle-bounce 2s infinite;
+      }
+    </style>
+    <style>
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal-on-scroll.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .glass-nav {
+        background: rgba(42, 54, 99, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(181, 159, 120, 0.15);
+      }
+      .parallax-hero {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .shine-effect {
+        position: relative;
+        overflow: hidden;
+      }
+      .shine-effect::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          to bottom right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: rotate(45deg);
+        animation: shine 4s infinite;
+      }
+      .ken-burns {
+        transition: transform 10s ease-out;
+      }
+      .ken-burns:hover {
+        transform: scale(1.08);
+      }
+      @keyframes shine {
+        0% {
+          transform: translateX(-200%) rotate(45deg);
+        }
+        100% {
+          transform: translateX(200%) rotate(45deg);
+        }
+      }
+    </style>
+    <style>
+      .gold-hover {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+      }
+
+      .gold-hover::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -150%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent 30%,
+          rgba(255, 255, 255, 0.7),
+          transparent 70%
+        );
+        transition: 0.8s;
+      }
+
+      .gold-hover:hover::after {
+        left: 150%;
+      }
+    </style>
+    <style>
+      @media (max-width: 768px) {
+        .animate-fade-in-mobile {
+          transition: all 1s ease-out;
+        }
+      }
+
+      /* Bounce animation for scroll indicator */
+      @keyframes bounce-indicator {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(10px);
+        }
+      }
+      .animate-bounce {
+        animation: bounce-indicator 1.5s infinite;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const observerOptions = {
+          threshold: 0.1,
+        };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        }, observerOptions);
+        document
+          .querySelectorAll(".reveal-on-scroll")
+          .forEach((el) => observer.observe(el));
+      });
+    </script>
+  </head>
+  <body
+    class="bg-cream dark:bg-background-dark font-display text-navy dark:text-slate-100 transition-colors duration-300"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="sticky top-0 z-50 w-full glass-nav px-6 lg:px-20 py-4 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <!-- LOGO -->
+          <div
+            class="relative flex items-center bg-transparent cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:drop-shadow-xl"
+            onclick="window.location.href = './course_details.html'"
+          >
+            <img
+              alt="Logo"
+              class="h-16 w-auto object-contain bg-transparent"
+              src="media/logo.png"
+            />
+
+            <!-- Metallic shine overlay -->
+            <div class="absolute inset-0 pointer-events-none overflow-hidden">
+              <div
+                class="absolute top-0 left-[-50%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/30 to-transparent transform rotate-12 scale-x-0 hover:scale-x-100 transition-transform duration-700 ease-in-out"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <nav class="hidden md:flex items-center gap-10">
+          <a
+            class="text-cream/80 hover:text-gold text-sm font-semibold transition-colors"
+            href="#significance"
+            >التعريف</a
+          >
+          <a
+            class="text-cream/80 hover:text-gold text-sm font-semibold transition-colors"
+            href="#objectives"
+            >المميزات</a
+          >
+          <a
+            class="text-cream/80 hover:text-gold text-sm font-semibold transition-colors"
+            href="#curriculum"
+            >المستهدفين</a
+          >
+          <a
+            class="text-cream/80 hover:text-gold text-sm font-semibold transition-colors"
+            href="#features"
+            >الاهداف</a
+          >
+          <a
+            class="text-cream/80 hover:text-gold text-sm font-semibold transition-colors"
+            href="#bonuses"
+            >البونص</a
+          >
+          <a
+            class="text-cream/80 hover:text-gold text-sm font-semibold transition-colors"
+            href="#reviews"
+            >الاراء</a
+          >
+          <a
+            class="text-cream/80 hover:text-gold text-sm font-semibold transition-colors"
+            href="#payments"
+            >طرق الدفع</a
+          >
+          <a
+            class="text-cream/80 hover:text-gold text-sm font-semibold transition-colors"
+            href="#activate"
+            >التسجيل</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="bg-gold hover:bg-gold/90 text-navy px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg hover:shadow-gold/20 shine-effect"
+          >
+            <a href="https://wa.me/+971543308378"> سجل الآن </a>
+          </button>
+        </div>
+
+        <!-- MOBILE MENU BTN -->
+        <div class="md:hidden">
+          <span
+            id="menuBtn"
+            class="material-symbols-outlined text-amber-500 dark:text-amber-400"
+          >
+            menu
+          </span>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="fixed top-[72px] left-0 right-0 z-[999] hidden bg-white dark:bg-charcoal border-t shadow-lg"
+        >
+          <nav class="flex flex-col gap-6 px-6 py-6 font-semibold text-right">
+            <a
+              class="mobile-link relative text-amber-400 font-extrabold text-sm transition-all duration-300 hover:text-amber-500 hover:scale-105"
+              href="index.html#courses"
+            >
+              جميع الكورسات
+              <!-- Glow effect -->
+              <span
+                class="absolute inset-0 bg-amber-400 rounded-md opacity-0 blur-xl transition-opacity duration-300 hover:opacity-40 pointer-events-none"
+              ></span>
+            </a>
+            <a class="mobile-link" href="#significance">التعريف</a>
+            <a class="mobile-link" href="#objectives">المميزات</a>
+            <a class="mobile-link" href="#curriculum">المستهدفين</a>
+            <a class="mobile-link" href="#features">الاهداف</a>
+            <a class="mobile-link" href="#bonuses">البونص</a>
+            <a class="mobile-link" href="#reviews">الاراء</a>
+            <a class="mobile-link" href="#payments">طرق الدفع</a>
+            <a class="mobile-link" href="#activate">التسجيل</a>
+
+            <a
+              href="https://wa.me/971543308378"
+              class="mt-4 flex h-11 items-center justify-center rounded-lg bg-primary text-white font-bold"
+            >
+              ابدأ الآن
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Hero Section: Full Cinematic Desktop + Mobile -->
+      <section
+        class="relative w-full min-h-screen md:min-h-[130vh] lg:min-h-[140vh] flex flex-col items-start md:items-center bg-[#0a1128] overflow-hidden"
+      >
+        <!-- Background: Luxurious & Professional -->
+        <div class="absolute inset-0 w-full h-full" id="hero-bg">
+          <img
+            class="w-full h-full object-cover object-top opacity-90 filter brightness-90 contrast-90 saturate-110 blur-[1px] transition-all duration-700"
+            src="media/pic.png"
+            alt="Hero Background"
+          />
+          <!-- Luxurious Gradient Overlay -->
+          <div
+            class="absolute inset-0"
+            style="
+              background: radial-gradient(
+                ellipse 50% 90% at top,
+                rgba(255, 230, 180, 0.05) 0%,
+                rgba(255, 215, 130, 0.1) 20%,
+                rgba(10, 17, 40, 0.2) 40%,
+                rgba(10, 17, 40, 0.5) 70%,
+                rgba(10, 17, 40, 0.75) 100%
+              );
+              mix-blend-mode: soft-light;
+            "
+          ></div>
+          <!-- Subtle Vignette for luxury -->
+          <div
+            class="absolute inset-0 pointer-events-none"
+            style="
+              background: radial-gradient(
+                circle at center,
+                transparent 60%,
+                rgba(10, 17, 40, 0.6) 100%
+              );
+            "
+          ></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div
+          class="relative z-10 max-w-7xl mx-auto px-6 lg:px-20 pt-16 sm:pt-24 md:pt-32 lg:pt-40 grid lg:grid-cols-2 gap-12 items-start md:items-center"
+        >
+          <div
+            id="hero-text"
+            class="opacity-0 translate-y-12 animate-fade-in-mobile"
+          >
+            <!-- Year Tag -->
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-bold tracking-widest uppercase mb-6"
+            >
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-gold"
+                ></span>
+              </span>
+              2026
+            </div>
+
+            <!-- Main Title -->
+            <h1
+              class="text-cream text-5xl sm:text-6xl lg:text-8xl font-black leading-tight tracking-tighter mb-6"
+            >
+              كورس <span class="text-gold">كاش</span> كاش
+            </h1>
+
+            <!-- Subtitle -->
+            <p
+              class="text-sage/90 text-lg sm:text-xl lg:text-2xl max-w-2xl leading-relaxed font-medium mb-10 font-bold"
+            >
+              المنهجية المتكاملة لمضاعفة مبيعاتك اونلاين
+              <br />
+              في 30 يوما!
+              <br />
+              <br />
+              <br />
+              <br />
+              <span
+                class="gold-hover text-2xl sm:text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-500 bg-clip-text text-transparent"
+              >
+                فارس الطاهر
+              </span>
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://wa.me/+971543308378"
+                class="bg-gold hover:bg-gold/90 text-navy px-8 py-4 rounded-xl text-base font-black transition-all shadow-xl flex items-center justify-center gap-2 animate-pulse-slow shine-effect"
+              >
+                ابدأ الآن
+                <span class="material-symbols-outlined">arrow_back</span>
+              </a>
+              <!-- <a
+                href="#curriculum"
+                class="border border-cream/20 hover:bg-cream/5 text-cream px-8 py-4 rounded-xl text-base font-bold transition-all backdrop-blur-sm"
+              >
+                عرض المحتوي
+              </a> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div
+          class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce"
+        >
+          <span class="material-symbols-outlined text-white text-3xl"
+            >expand_more</span
+          >
+          <p class="text-white/70 text-sm">اسحب للأسفل</p>
+        </div>
+      </section>
+      <!-- Why This Course Section (Compact) -->
+      <!-- Why This Course Section (Ultra-Compact) -->
+      <div
+        class="h-8 w-full bg-gradient-to-b from-[#2a3663] to-[#b59f78]"
+      ></div>
+
+      <section
+        dir="rtl"
+        id="significance"
+        class="py-12 px-6 border-y reveal-on-scroll text-right text-navy-900 border-navy/20"
+        style="background-color: #b59f78"
+      >
+        <div class="max-w-4xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-8 animate-fade-up">
+            <h2
+              class="relative inline-block font-extrabold tracking-widest uppercase text-lg md:text-xl mb-3 text-navy/90"
+            >
+              تعريف الكورس
+              <span
+                class="absolute left-0 top-full w-full h-3 bg-gradient-to-t from-navy/30 to-transparent transform scale-y-[-1] opacity-40 pointer-events-none"
+              ></span>
+            </h2>
+
+            <h3
+              class="text-3xl lg:text-4xl font-black mb-3 tracking-tight text-navy"
+            >
+              لماذا كاش كاش؟
+            </h3>
+
+            <div class="mx-auto w-20 h-1 bg-navy/40 rounded-full"></div>
+          </div>
+
+          <!-- Important Note -->
+          <div class="space-y-4 text-right animate-fade-up delay-200">
+            <div
+              class="border-navy/40 py-3 border-l-4 pl-5 bg-navy/5 rounded-xl shadow-lg hover:shadow-xl transition-all"
+            >
+              <h4
+                class="text-xl font-extrabold text-navy mb-2 flex items-center gap-2"
+              >
+                ⚠️ تنبيه هام لعام 2026:
+              </h4>
+              <p class="text-lg md:text-xl leading-snug font-bold text-navy/90">
+                أي صاحب مشروع (منتج، خدمة، أو خبير) ما بيحقق مبيعات كافية
+                ومستقرة في 2026، هو فعلياً "خارج اللعبة". السوق السوداني اتغير،
+                والمنافسة بقت شرسة. لو ما حصنت مشروعك بنظام بيع ذكي، إنت في خطر
+                حقيقي!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="h-8 w-full bg-gradient-to-b from-[#b59f78] to-[#2a3663]"
+      ></div>
+      <!-- Video + CTA Section -->
+      <section
+        class="py-24 bg-[#0a1128] text-white overflow-hidden relative reveal-on-scroll"
+      >
+        <div
+          class="absolute top-0 right-0 w-1/3 h-full bg-blue-600/10 blur-[140px] rounded-full"
+        ></div>
+
+        <div
+          class="max-w-5xl mx-auto px-6 relative z-10 text-center animate-fade-up"
+        >
+          <h2 class="text-4xl font-medium mb-12">
+            شاهد هذا الفيديو بتركيز عالٍ.. السر كله هنا 👇
+          </h2>
+
+          <div
+            class="relative aspect-video bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden mb-16 shadow-2xl group cursor-pointer transition-transform hover:scale-[1.02]"
+          >
+            <img
+              class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-1000 slow-zoom"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXj9sXhqGw7BaExz0_r4xIEVy3CB0QVYbLoxDk6gwX6E5BFOi03ZPafv1ndgRcnVS3ps0kFtgUTXAhnfWc1CNPTBDgi-kySZkGbVrDJS9p6-XbRdhXlwAwEIrZwmhNcdv65dSe-muf42ppwfaI4icYgjZW1_uV61PzZ3cFXHHBIQZwJTCkCB4853PyfAs9EHXZn-ESkB7xKBBlLuulAt_eVjNr33sxr0SeBo1zjdOunsJw3Y2MUvjB2jgsA9TiOTpts6Q6ht0bSDc"
+            />
+
+            <div
+              class="w-24 h-24 bg-tan rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform relative z-20"
+            >
+              <span class="material-symbols-outlined text-white text-4xl mr-2">
+                play_arrow
+              </span>
+            </div>
+          </div>
+
+          <div class="max-w-2xl mx-auto">
+            <h3 class="text-3xl mb-6 italic animate-fade-up delay-300">
+              جاهز لإعادة تحديد مسارك؟
+            </h3>
+
+            <p class="text-white/70 mb-10 text-lg animate-fade-up delay-400">
+              انضم إلى أكثر من 5,000 مهني قاموا بتحويل حياتهم المهنية من خلال
+              أطرنا الخاصة.
+            </p>
+
+            <a
+              href="https://wa.me/+971543308378"
+              class="bg-primary text-white px-12 py-5 rounded-lg font-bold text-xl transition-all shadow-xl shadow-primary/20 hover:bg-[#081020] hover:-translate-y-1 animate-fade-up delay-500 inline-block"
+            >
+              احجز مكانك اليوم
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- REVIEWS -->
+      <section
+        class="px-6 border-t pt-32 pb-24 reveal-on-scroll border-navy/10 bg-navy py-24"
+        id="reviews"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2
+              class="relative inline-block font-black tracking-widest uppercase text-xl md:text-2xl mb-6 text-amber-200"
+            >
+              الناس السبقوك في الكورس قالوا شنو ؟
+
+              <!-- Reflection -->
+              <span
+                class="absolute left-0 top-full w-full h-6 bg-gradient-to-t from-amber-200/30 to-transparent transform scale-y-[-1] opacity-40 pointer-events-none"
+              ></span>
+            </h2>
+            <h3 class="text-4xl lg:text-5xl font-black text-cream">
+              الناس اللي حضروا الكورس ده، حياتهم المهنية اتغيرت 180 درجة، ودي
+              قصصهم:
+            </h3>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Testimonial 1 -->
+            <div
+              class="relative pt-16 pb-10 px-8 rounded-2xl border shadow-sm hover:shadow-xl transition-all flex flex-col items-center text-center shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-500 bg-navy-gradient border-gold/20 shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:-translate-y-2"
+            >
+              <div class="absolute -top-10 left-1/2 -translate-x-1/2">
+                <img
+                  alt="Marcus Thorne"
+                  class="size-20 rounded-full border-4 object-cover shadow-lg border-gold/40 ken-burns"
+                  src="media/ahmed.png"
+                />
+              </div>
+              <div class="flex gap-1 mb-4 text-gold">
+                <span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                >
+              </div>
+              <blockquote
+                class="text-lg leading-relaxed italic mb-8 flex-grow text-sage/90"
+              >
+                "كنت تايه وما عارف أجيب عملاء من وين ولا أتفاوض معاهم، بعد كاش
+                كاش بقيت بحقق مبيعات أنا ذاتي ما مصدقها!"
+              </blockquote>
+              <div class="pt-6 border-t border-gold/10 w-full">
+                <p class="font-black text-lg text-cream">أحمد عبدالمنعم</p>
+                <p class="text-xs font-bold uppercase tracking-wider text-gold">
+                  (كاتب محتوى خبراء)
+                </p>
+              </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div
+              class="relative pt-16 pb-10 px-8 rounded-2xl border shadow-sm hover:shadow-xl transition-all flex flex-col items-center text-center shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-500 bg-navy-gradient border-gold/20 shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:-translate-y-2"
+            >
+              <div class="absolute -top-10 left-1/2 -translate-x-1/2">
+                <img
+                  alt="Sarah Chen"
+                  class="size-20 rounded-full border-4 object-cover shadow-lg border-gold/40 ken-burns"
+                  src="media/huda.png"
+                />
+              </div>
+              <div class="flex gap-1 mb-4 text-gold">
+                <span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                >
+              </div>
+              <blockquote
+                class="text-lg leading-relaxed italic mb-8 flex-grow text-sage/90"
+              >
+                "كنت مشتتة بين الفريق والإعلانات، هسي بنيت نظام بيع واضح وبقيت
+                بحقق التارقت وأنا مرتاحة."
+              </blockquote>
+              <div class="pt-6 border-t border-gold/10 w-full">
+                <p class="font-black text-lg text-cream">هدي جعفر</p>
+                <p class="text-xs font-bold uppercase tracking-wider text-gold">
+                  (كوتش ريادة أعمال)
+                </p>
+              </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div
+              class="relative pt-16 pb-10 px-8 rounded-2xl border shadow-sm hover:shadow-xl transition-all flex flex-col items-center text-center shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-500 bg-navy-gradient border-gold/20 shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:-translate-y-2"
+            >
+              <div class="absolute -top-10 left-1/2 -translate-x-1/2">
+                <img
+                  alt="David Hartmann"
+                  class="size-20 rounded-full border-4 object-cover shadow-lg border-gold/40 ken-burns"
+                  src="media/enam.png"
+                />
+              </div>
+              <div class="flex gap-1 mb-4 text-gold">
+                <span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                >
+              </div>
+              <blockquote
+                class="text-lg leading-relaxed italic mb-8 flex-grow text-sage/90"
+              >
+                "الأطر النفسية غيرت قواعد اللعبة. لقد فهمت أخيراً 'السبب' وراء
+                صنع القرار المعقد في البيئات عالية المخاطر."
+              </blockquote>
+              <div class="pt-6 border-t border-gold/10 w-full">
+                <p class="font-black text-lg text-cream">خولة علي</p>
+                <p class="text-xs font-bold uppercase tracking-wider text-gold">
+                  (براند ريلا فاشون)
+                </p>
+              </div>
+            </div>
+            <!-- Testimonial 4 -->
+            <div
+              class="relative pt-16 pb-10 px-8 rounded-2xl border shadow-sm hover:shadow-xl transition-all flex flex-col items-center text-center shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-500 bg-navy-gradient border-gold/20 shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:-translate-y-2"
+            >
+              <div class="absolute -top-10 left-1/2 -translate-x-1/2">
+                <img
+                  alt="Sarah Chen"
+                  class="size-20 rounded-full border-4 object-cover shadow-lg border-gold/40 ken-burns"
+                  src="media/randa.png"
+                />
+              </div>
+              <div class="flex gap-1 mb-4 text-gold">
+                <span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                ><span class="material-symbols-outlined fill-1 text-xl"
+                  >star</span
+                >
+              </div>
+              <blockquote
+                class="text-lg leading-relaxed italic mb-8 flex-grow text-sage/90"
+              >
+                "كنت مشتتة بين الفريق والإعلانات، هسي بنيت نظام بيع واضح وبقيت
+                بحقق التارقت وأنا مرتاحة."
+              </blockquote>
+              <div class="pt-6 border-t border-gold/10 w-full">
+                <p class="font-black text-lg text-cream">د. رندا ادريس</p>
+                <p class="text-xs font-bold uppercase tracking-wider text-gold">
+                  (أخصائية تجميل)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-2xl mx-auto text-center">
+          <br />
+          <br />
+          <button
+            class="bg-primary text-white px-12 py-5 rounded-lg font-bold text-xl transition-all shadow-xl shadow-primary/20 hover:bg-[#081020] hover:-translate-y-1"
+          >
+            <a href="https://wa.me/+971543308378">
+              انضم الينا اليوم عبر واتساب
+            </a>
+          </button>
+        </div>
+      </section>
+      <!-- LERNING OBJECTIVE -->
+      <section
+        class="py-24 dark:bg-background-dark px-6 bg-sage/30 reveal-on-scroll"
+        id="objectives"
+      >
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2
+              class="relative inline-block font-black tracking-widest uppercase text-xl md:text-2xl mb-6 text-navy/90"
+            >
+              مميزات الكورس
+              <!-- Reflection -->
+              <span
+                class="absolute left-0 top-full w-full h-6 bg-gradient-to-t from-navy/30 to-transparent transform scale-y-[-1] opacity-40 pointer-events-none"
+              ></span>
+            </h2>
+
+            <h3
+              class="text-navy dark:text-cream text-4xl lg:text-5xl font-black mb-6"
+            >
+              ليه تدخل "كاش كاش"بالرغم ان السوق مليان كورسات؟
+            </h3>
+          </div>
+          <div
+            class="flex justify-between gap-4 py-6 px-4 flex-wrap lg:flex-nowrap"
+          >
+            <!-- Card 0 -->
+            <div
+              class="flex-1 min-w-[150px] max-w-[220px] bg-white/80 dark:bg-navy/20 p-6 rounded-[50px] border border-sage shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col min-h-[250px] hover:-translate-y-2 hover:scale-[1.03] group"
+            >
+              <div
+                class="bg-primary/10 text-primary p-4 rounded-full w-fit mb-6 group-hover:bg-gold group-hover:text-navy transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl">search</span>
+              </div>
+              <h4
+                class="text-navy dark:text-gold text-lg font-bold mb-3 text-center"
+              >
+                متابعة ميدانية
+              </h4>
+              <p
+                class="text-slate-600 dark:text-sage leading-relaxed flex-grow text-center"
+              >
+                مش مجرد محاضرات، إحنا بندخل معاك جوه مشروعك وبنطبق سوا.
+              </p>
+            </div>
+
+            <!-- Card 1 -->
+            <div
+              class="flex-1 min-w-[150px] max-w-[220px] bg-white/80 dark:bg-navy/20 p-6 rounded-[50px] border border-sage shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col min-h-[250px] hover:-translate-y-2 hover:scale-[1.03] group"
+            >
+              <div
+                class="bg-primary/10 text-primary p-4 rounded-full w-fit mb-6 group-hover:bg-gold group-hover:text-navy transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl">lens</span>
+              </div>
+              <h4
+                class="text-navy dark:text-gold text-lg font-bold mb-3 text-center"
+              >
+                محاضرات لايف
+              </h4>
+              <p
+                class="text-slate-600 dark:text-sage leading-relaxed flex-grow text-center"
+              >
+                تفاعل مباشر على Google Meet مع إمكانية الرجوع للتسجيلات في أي
+                وقت.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="flex-1 min-w-[150px] max-w-[220px] bg-white/80 dark:bg-navy/20 p-6 rounded-[50px] border border-sage shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col min-h-[250px] hover:-translate-y-2 hover:scale-[1.03] group"
+            >
+              <div
+                class="bg-primary/10 text-primary p-4 rounded-full w-fit mb-6 group-hover:bg-gold group-hover:text-navy transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl">groups</span>
+              </div>
+              <h4
+                class="text-navy dark:text-gold text-lg font-bold mb-3 text-center"
+              >
+                قاعدة 30/70
+              </h4>
+              <p
+                class="text-slate-600 dark:text-sage leading-relaxed flex-grow text-center"
+              >
+                30% فقط نظري، و70% تطبيق عملي ونتائج ملموسة.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="flex-1 min-w-[150px] max-w-[220px] bg-white/80 dark:bg-navy/20 p-6 rounded-[50px] border border-sage shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col min-h-[250px] hover:-translate-y-2 hover:scale-[1.03] group"
+            >
+              <div
+                class="bg-primary/10 text-primary p-4 rounded-full w-fit mb-6 group-hover:bg-gold group-hover:text-navy transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >monitoring</span
+                >
+              </div>
+              <h4
+                class="text-navy dark:text-gold text-lg font-bold mb-3 text-center"
+              >
+                تصحيح فردي
+              </h4>
+              <p
+                class="text-slate-600 dark:text-sage leading-relaxed flex-grow text-center"
+              >
+                كل تمارينك بتصحح ليك براك عشان تعرف غلطك وين بالضبط.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="flex-1 min-w-[150px] max-w-[220px] bg-white/80 dark:bg-navy/20 p-6 rounded-[50px] border border-sage shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col min-h-[250px] hover:-translate-y-2 hover:scale-[1.03] group"
+            >
+              <div
+                class="bg-primary/10 text-primary p-4 rounded-full w-fit mb-6 group-hover:bg-gold group-hover:text-navy transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl">redo</span>
+              </div>
+              <h4
+                class="text-navy dark:text-gold text-lg font-bold mb-3 text-center"
+              >
+                اعادة البيع
+              </h4>
+              <p
+                class="text-slate-600 dark:text-sage leading-relaxed flex-grow text-center"
+              >
+                استراتيجية البيع المتكرر لنفس العميل.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-2xl mx-auto text-center">
+          <br />
+          <br />
+          <button
+            class="bg-primary text-white px-12 py-5 rounded-lg font-bold text-xl transition-all shadow-xl shadow-primary/20 hover:bg-[#081020] hover:-translate-y-1"
+          >
+            <a href="https://wa.me/+971543308378">
+              انضم الينا اليوم عبر واتساب
+            </a>
+          </button>
+        </div>
+      </section>
+      <!-- Course Content Section -->
+      <section
+        class="py-24 bg-navy text-cream px-6 reveal-on-scroll"
+        id="curriculum"
+      >
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="flex flex-col items-center mb-12 border-b border-gold/30 pb-6"
+          >
+            <div class="max-w-4xl mx-auto">
+              <div class="text-center mb-16">
+                <h2
+                  class="relative inline-block font-black tracking-widest uppercase text-xl md:text-2xl mb-6 text-white"
+                >
+                  لمن هذ الكورس؟
+                  <span
+                    class="absolute left-0 top-full w-full h-6 bg-gradient-to-t from-white/30 to-transparent transform scale-y-[-1] opacity-40 pointer-events-none"
+                  ></span>
+                </h2>
+              </div>
+              <h3 class="text-tan text-4xl lg:text-5xl font-black mb-6">
+                ادخل الكورس فورا اذا كنت:
+              </h3>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <!-- Module 1 -->
+            <div
+              class="group bg-navy-gradient border border-gold/10 rounded-xl overflow-hidden hover:border-gold/40 transition-all hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <button
+                class="w-full flex items-center justify-between p-6 text-left"
+              >
+                <div class="flex items-center gap-6">
+                  <span class="text-gold font-black text-2xl opacity-40"
+                    >01</span
+                  >
+                  <div>
+                    <h4 class="text-xl font-bold">
+                      صاحب مشروع جديد وما عارف تبدأ تسويق من وين.
+                    </h4>
+                    <!-- <p class="text-sage/60 text-sm">
+                      صاحب مشروع جديد وما عارف تبدأ تسويق من وين.
+                    </p> -->
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-gold transition-transform rotate-180 group-hover:rotate-0"
+                  >star</span
+                >
+              </button>
+            </div>
+            <!-- Module 2 -->
+            <div
+              class="group bg-navy-gradient border border-gold/10 rounded-xl overflow-hidden hover:border-gold/40 transition-all hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <button
+                class="w-full flex items-center justify-between p-6 text-left"
+              >
+                <div class="flex items-center gap-6">
+                  <span class="text-gold font-black text-2xl opacity-40"
+                    >02</span
+                  >
+                  <div>
+                    <h4 class="text-xl font-bold">
+                      شغلك بادي فعلاً لكن المبيعات "ضعيفة ومذبذبة".
+                    </h4>
+                    <!-- <p class="text-sage/60 text-sm">
+                      شغلك بادي فعلاً لكن المبيعات "ضعيفة ومذبذبة".
+                    </p> -->
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-gold transition-transform rotate-180 group-hover:rotate-0"
+                  >star</span
+                >
+              </button>
+            </div>
+            <!-- Module 3 -->
+            <div
+              class="group bg-navy-gradient border border-gold/10 rounded-xl overflow-hidden hover:border-gold/40 transition-all hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <button
+                class="w-full flex items-center justify-between p-6 text-left"
+              >
+                <div class="flex items-center gap-6">
+                  <span class="text-gold font-black text-2xl opacity-40"
+                    >03</span
+                  >
+                  <div>
+                    <h4 class="text-xl font-bold">
+                      فريلانسر بيعاني في جذب العملاء أو "قفل الديل" معاهم.
+                    </h4>
+                    <!-- <p class="text-sage/60 text-sm">
+                      فريلانسر بيعاني في جذب العملاء أو "قفل الديل" معاهم.
+                    </p> -->
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-gold transition-transform rotate-180 group-hover:rotate-0"
+                  >star</span
+                >
+              </button>
+            </div>
+            <!-- Module 4 -->
+            <div
+              class="group bg-navy-gradient border border-gold/10 rounded-xl overflow-hidden hover:border-gold/40 transition-all hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <button
+                class="w-full flex items-center justify-between p-6 text-left"
+              >
+                <div class="flex items-center gap-6">
+                  <span class="text-gold font-black text-2xl opacity-40"
+                    >04</span
+                  >
+                  <div>
+                    <h4 class="text-xl font-bold">
+                      صاحب خدمة أونلاين مجهد في النشر والقروبات والنتيجة "صفر
+                    </h4>
+                    <!-- <p class="text-sage/60 text-sm">
+                      صاحب خدمة أونلاين مجهد في النشر والقروبات والنتيجة "صفر
+                      بيع".
+                    </p> -->
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-gold transition-transform rotate-180 group-hover:rotate-0"
+                  >star</span
+                >
+              </button>
+            </div>
+            <!-- Module 5 -->
+            <div
+              class="group bg-navy-gradient border border-gold/10 rounded-xl overflow-hidden hover:border-gold/40 transition-all hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <button
+                class="w-full flex items-center justify-between p-6 text-left"
+              >
+                <div class="flex items-center gap-6">
+                  <span class="text-gold font-black text-2xl opacity-40"
+                    >05</span
+                  >
+                  <div>
+                    <h4 class="text-xl font-bold">
+                      صاحب براند أو منتج ومنصاتك "جايطة" وما عارف نفسك ربحان ولا
+                    </h4>
+                    <!-- <p class="text-sage/60 text-sm">
+                      صاحب براند أو منتج ومنصاتك "جايطة" وما عارف نفسك ربحان ولا
+                      خسران.
+                    </p> -->
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-gold transition-transform rotate-180 group-hover:rotate-0"
+                  >star</span
+                >
+              </button>
+            </div>
+            <!-- Module 6 -->
+            <div
+              class="group bg-navy-gradient border border-gold/10 rounded-xl overflow-hidden hover:border-gold/40 transition-all hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <button
+                class="w-full flex items-center justify-between p-6 text-left"
+              >
+                <div class="flex items-center gap-6">
+                  <span class="text-gold font-black text-2xl opacity-40"
+                    >06</span
+                  >
+                  <div>
+                    <h4 class="text-xl font-bold">
+                      بتسوق بالعمولة والوصول للتارقت بقى بياخد منك زمن طويل.
+                    </h4>
+                    <!-- <p class="text-sage/60 text-sm">
+                      بتسوق بالعمولة والوصول للتارقت بقى بياخد منك زمن طويل.
+                    </p> -->
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-gold transition-transform rotate-180 group-hover:rotate-0"
+                  >star</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- COURSE FEATURES -->
+      <section
+        id="features"
+        class="py-24 px-6 bg-cream border-y border-sage/20 reveal-on-scroll"
+      >
+        <div class="max-w-5xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2
+              class="relative inline-block font-black tracking-widest uppercase text-xl md:text-2xl mb-6 text-navy/90"
+            >
+              اهداف الكورس
+              <span
+                class="absolute left-0 top-full w-full h-6 bg-gradient-to-t from-navy/30 to-transparent transform scale-y-[-1] opacity-40 pointer-events-none"
+              ></span>
+            </h2>
+            <h3 class="text-navy text-4xl lg:text-5xl font-black">
+              كيف حنحقق "التحول" في مبيعاتك؟
+            </h3>
+          </div>
+
+          <!-- Features Grid -->
+          <div class="flex flex-wrap justify-center gap-6 py-6 px-4">
+            <!-- Feature Card Template -->
+            <div
+              class="flex-1 max-w-[280px] bg-white p-8 rounded-[50%/30%] border border-sage/30 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col items-center text-center"
+            >
+              <div
+                class="bg-navy text-gold p-4 rounded-full w-fit mb-6 group-hover:bg-gold group-hover:text-navy transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl">groups_3</span>
+              </div>
+              <h4 class="text-navy text-xl font-bold mb-3">اختبار العملاء</h4>
+              <p class="text-sm leading-relaxed text-navy">
+                تحديد العميل المثالي وعمل اختبار حقيقي لوجوده.
+              </p>
+            </div>
+
+            <div
+              class="flex-1 max-w-[280px] bg-white p-8 rounded-[50%/30%] border border-sage/30 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col items-center text-center"
+            >
+              <div
+                class="bg-navy text-gold p-4 rounded-full w-fit mb-6 group-hover:bg-gold group-hover:text-navy transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl">school</span>
+              </div>
+              <h4 class="text-navy text-xl font-bold mb-3">
+                الميزات التنافسية
+              </h4>
+              <p class="text-sm leading-relaxed text-navy">
+                إعادة تعريف المشكلة وبناء ميزات تنافسية تجعلك "الخيار الوحيد".
+              </p>
+            </div>
+
+            <div
+              class="flex-1 max-w-[280px] bg-white p-8 rounded-[50%/30%] border border-sage/30 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col items-center text-center"
+            >
+              <div
+                class="bg-navy text-gold p-4 rounded-full w-fit mb-6 group-hover:bg-gold group-hover:text-navy transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >all_inclusive</span
+                >
+              </div>
+              <h4 class="text-navy text-xl font-bold mb-3">نظام البيع</h4>
+              <p class="text-sm leading-relaxed text-navy">
+                نظام البيع الآلي المناسب لنوع عملك.
+              </p>
+            </div>
+
+            <div
+              class="flex-1 max-w-[280px] bg-white p-8 rounded-[50%/30%] border border-sage/30 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col items-center text-center"
+            >
+              <div
+                class="bg-navy text-gold p-4 rounded-full w-fit mb-6 group-hover:bg-gold group-hover:text-navy transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >verified_user</span
+                >
+              </div>
+              <h4 class="text-navy text-xl font-bold mb-3">فن التفاوض</h4>
+              <p class="text-sm leading-relaxed text-navy">
+                إتقان فن التفاوض والاعتراضات.
+              </p>
+            </div>
+
+            <div
+              class="flex-1 max-w-[280px] bg-white p-8 rounded-[50%/30%] border border-sage/30 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col items-center text-center"
+            >
+              <div
+                class="bg-navy text-gold p-4 rounded-full w-fit mb-6 group-hover:bg-gold group-hover:text-navy transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl">redo</span>
+              </div>
+              <h4 class="text-navy text-xl font-bold mb-3">إعادة البيع</h4>
+              <p class="text-sm leading-relaxed text-navy">
+                استراتيجية البيع المتكرر لنفس العميل.
+              </p>
+            </div>
+          </div>
+
+          <!-- Journey Details -->
+          <div
+            class="bg-navy/5 border border-navy/10 p-10 rounded-3xl text-center mt-12"
+          >
+            <h4 class="text-3xl font-black mb-4">تفاصيل الرحلة</h4>
+            <p class="text-2xl leading-relaxed font-medium mb-0">
+              9 محاضرات خلال شهر كامل (محاضرتين أسبوعياً) + متابعة يومية على
+              الواتساب.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- BONUS Section -->
+      <section
+        class="py-24 px-6 bg-cream border-t border-sage/20 reveal-on-scroll bg-sage"
+        id="bonuses"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2
+              class="relative inline-block font-black tracking-widest uppercase text-xl md:text-2xl mb-6 text-navy/90"
+            >
+              هدايا مجانية (بقيمة 125,000 ج)
+              <!-- Reflection -->
+              <span
+                class="absolute left-0 top-full w-full h-6 bg-gradient-to-t from-navy/30 to-transparent transform scale-y-[-1] opacity-40 pointer-events-none"
+              ></span>
+            </h2>
+            <h3 class="text-navy text-4xl lg:text-5xl font-black">
+              عند انضمامك اليوم، ستحصل مجاناً على 5 ورشات احترافية:
+            </h3>
+          </div>
+          <div class="relative group">
+            <!-- Slider Controls -->
+
+            <!-- Previous Button -->
+            <button
+              class="slider-prev absolute left-0 top-1/2 -translate-y-1/2 -ml-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white shadow-lg border border-navy-deep/5 flex items-center justify-center text-navy-deep hover:bg-primary hover:text-white transition-all z-30 duration-300 ease-in-out hover:scale-110 tactile-shadow btn-shine"
+            >
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+
+            <button
+              class="slider-next absolute right-0 top-1/2 -translate-y-1/2 -mr-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white shadow-lg border border-navy-deep/5 flex items-center justify-center text-navy-deep hover:bg-primary hover:text-white transition-all z-30 duration-300 ease-in-out hover:scale-110 tactile-shadow btn-shine"
+            >
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+
+            <!-- Carousel Container -->
+            <div
+              class="menu-slider flex gap-8 overflow-x-auto pb-8 scrollbar-hide snap-x no-scrollbar"
+              style="scrollbar-width: none; -ms-overflow-style: none"
+            >
+              <!-- Bonus Card 1 -->
+              <div
+                class="min-w-[320px] md:min-w-[400px] snap-center bg-white rounded-2xl border border-sage/30 shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:-translate-y-2"
+              >
+                <div class="h-56 bg-navy overflow-hidden">
+                  <img
+                    alt="Contract Templates"
+                    class="w-full h-full object-cover opacity-80 hover:scale-110 transition-transform duration-700 ken-burns"
+                    src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&amp;w=800&amp;auto=format&amp;fit=crop"
+                  />
+                </div>
+                <div class="p-8">
+                  <h4 class="text-navy text-xl font-black mb-3">
+                    الورشة الاولي
+                  </h4>
+                  <p class="leading-relaxed text-sm text-navy">
+                    ورشة كتابة الإعلانات
+                  </p>
+                </div>
+              </div>
+              <!-- Bonus Card 2 -->
+              <div
+                class="min-w-[320px] md:min-w-[400px] snap-center bg-white rounded-2xl border border-sage/30 shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:-translate-y-2"
+              >
+                <div class="h-56 bg-navy overflow-hidden">
+                  <img
+                    alt="Private Community"
+                    class="w-full h-full object-cover opacity-80 hover:scale-110 transition-transform duration-700 ken-burns"
+                    src="media/plan.png"
+                  />
+                </div>
+                <div class="p-8">
+                  <h4 class="text-navy text-xl font-black mb-3">
+                    الورشة الثانية
+                  </h4>
+                  <p class="leading-relaxed text-sm text-navy">
+                    ورشة القصة البيعية
+                  </p>
+                </div>
+              </div>
+              <!-- Bonus Card 3 -->
+              <div
+                class="min-w-[320px] md:min-w-[400px] snap-center bg-white rounded-2xl border border-sage/30 shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:-translate-y-2"
+              >
+                <div class="h-56 bg-navy overflow-hidden">
+                  <img
+                    alt="Sales Audit Tool"
+                    class="w-full h-full object-cover opacity-80 hover:scale-110 transition-transform duration-700 ken-burns"
+                    src="media/groups.png"
+                  />
+                </div>
+                <div class="p-8">
+                  <h4 class="text-navy text-xl font-black mb-3">
+                    الورشة الثالثة
+                  </h4>
+                  <p class="leading-relaxed text-sm text-navy">
+                    ورشة إدارة القروبات
+                  </p>
+                </div>
+              </div>
+              <!-- Bonus Card 2 -->
+              <div
+                class="min-w-[320px] md:min-w-[400px] snap-center bg-white rounded-2xl border border-sage/30 shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:-translate-y-2"
+              >
+                <div class="h-56 bg-navy overflow-hidden">
+                  <img
+                    alt="Private Community"
+                    class="w-full h-full object-cover opacity-80 hover:scale-110 transition-transform duration-700 ken-burns"
+                    src="media/pages.png"
+                  />
+                </div>
+                <div class="p-8">
+                  <h4 class="text-navy text-xl font-black mb-3">
+                    الورشة الرابعة
+                  </h4>
+                  <p class="leading-relaxed text-sm text-navy">
+                    ورشة إدارة الصفحات
+                  </p>
+                </div>
+              </div>
+              <!-- Bonus Card 3 -->
+              <div
+                class="min-w-[320px] md:min-w-[400px] snap-center bg-white rounded-2xl border border-sage/30 shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:-translate-y-2"
+              >
+                <div class="h-56 bg-navy overflow-hidden">
+                  <img
+                    alt="Sales Audit Tool"
+                    class="w-full h-full object-cover opacity-80 hover:scale-110 transition-transform duration-700 ken-burns"
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&amp;w=800&amp;auto=format&amp;fit=crop"
+                  />
+                </div>
+                <div class="p-8">
+                  <h4 class="text-navy text-xl font-black mb-3">
+                    الورشة الخامسة
+                  </h4>
+                  <p class="leading-relaxed text-sm text-navy">يلا نبأ تسويق</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PAYMENT MTHODS -->
+      <section class="py-24 px-6 text-navy reveal-on-scroll" id="payments">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2
+            class="relative inline-block font-black tracking-widest uppercase text-xl md:text-2xl mb-6 text-navy/90"
+          >
+            تكلفة الكورس
+            <!-- Reflection -->
+            <span
+              class="absolute left-0 top-full w-full h-6 bg-gradient-to-t from-navy/30 to-transparent transform scale-y-[-1] opacity-40 pointer-events-none"
+            ></span>
+          </h2>
+          <h3 class="text-4xl lg:text-5xl font-black mb-12 tracking-tight">
+            استثمر في مشروعك الآن
+          </h3>
+          <div class="flex flex-wrap justify-center items-stretch gap-8 mb-16">
+            <!-- Plan 1 -->
+            <div
+              class="flex-1 max-w-[300px] bg-cream/80 border border-sage/30 rounded-3xl p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 relative"
+            >
+              <!-- POPULAR Badge -->
+              <div
+                class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gold text-navy font-black px-4 py-1 rounded-full text-sm shadow-md"
+              >
+                الاكثر طلبا
+              </div>
+              <h3 class="text-3xl font-extrabold mb-3">العرض العام</h3>
+              <span
+                class="text-2xl font-bold uppercase tracking-widest opacity-90 block mb-2"
+              >
+                220,000 ج
+              </span>
+              <p class="text-sm opacity-70">بدلاً من 445,000 ج</p>
+            </div>
+
+            <!-- Plan 2 - VIP -->
+            <div
+              class="flex-1 max-w-[300px] bg-gold/20 border border-gold/40 rounded-3xl p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 relative"
+            >
+              <!-- VIP Badge -->
+              <div
+                class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gold text-navy font-black px-4 py-1 rounded-full text-sm shadow-md"
+              >
+                VIP
+              </div>
+
+              <h3 class="text-3xl font-extrabold mb-3">العرض البرايفت</h3>
+              <span
+                class="text-2xl font-bold uppercase tracking-widest opacity-90 block mb-2"
+              >
+                990,000 ج
+              </span>
+              <p class="text-sm opacity-70">
+                متابعة شخصية مع كوتش فارس وتطبيق مباشر على مشروعك
+              </p>
+            </div>
+
+            <!-- Plan 3 -->
+            <div
+              class="flex-1 max-w-[300px] bg-navy/10 border border-navy/20 rounded-3xl p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 relative"
+            >
+              <h3 class="text-3xl font-extrabold mb-3">العرض المسجل</h3>
+              <span
+                class="text-2xl font-bold uppercase tracking-widest opacity-90 block mb-2"
+              >
+                95,000 ج
+              </span>
+              <p class="text-sm opacity-70">
+                محاضرات مسجلة مع الملخصات بدون متابعة
+              </p>
+            </div>
+          </div>
+          <div class="max-w-2xl mx-auto text-center">
+            <br />
+            <br />
+            <button
+              class="bg-primary text-white px-12 py-5 rounded-lg font-bold text-xl transition-all shadow-xl shadow-primary/20 hover:bg-[#081020] hover:-translate-y-1"
+            >
+              <a href="https://wa.me/+971543308378">
+                انضم الينا اليوم عبر واتساب
+              </a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- COURSE PATH -->
+      <section class="py-24 px-6 bg-gold reveal-on-scroll" id="activate">
+        <div class="max-w-5xl mx-auto text-center">
+          <h2
+            class="relative inline-block font-black tracking-widest uppercase text-xl md:text-2xl mb-6 text-navy/90"
+          >
+            الطريق الى كاش كاش
+
+            <!-- Reflection -->
+            <span
+              class="absolute left-0 top-full w-full h-6 bg-gradient-to-t from-navy/30 to-transparent transform scale-y-[-1] opacity-40 pointer-events-none"
+            ></span>
+          </h2>
+          <div class="relative grid gap-8 md:grid-cols-4">
+            <!-- Path Connector (Desktop only) -->
+            <div
+              class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-navy/20 -translate-y-1/2"
+            ></div>
+            <!-- Step 1 -->
+            <div class="relative z-10 flex flex-col items-center">
+              <div
+                class="bg-navy text-gold rounded-full flex items-center justify-center font-black text-xl border-gold mb-6 size-24 border-8 shadow-2xl"
+              >
+                <span class="material-symbols-outlined scale-150"
+                  >payments</span
+                >
+              </div>
+              <h5 class="text-navy font-black mb-2">سداد الرسوم</h5>
+              <p class="text-navy/70 text-sm px-4 font-medium">
+                أكمل عملية الدفع واستلم تأكيدا فوريا.
+              </p>
+            </div>
+            <!-- Step 2 -->
+            <div class="relative z-10 flex flex-col items-center">
+              <div
+                class="bg-navy text-gold rounded-full flex items-center justify-center font-black text-xl border-gold mb-6 size-24 border-8 shadow-2xl"
+              >
+                <span class="material-symbols-outlined scale-150">vpn_key</span>
+              </div>
+              <h5 class="text-navy font-black mb-2">تحميل الايصال</h5>
+              <p class="text-navy/70 text-sm px-4 font-medium">
+                قم بتحميل ايصال الدفع او سكرين شوت
+              </p>
+            </div>
+            <!-- Step 3 -->
+            <div class="relative z-10 flex flex-col items-center">
+              <div
+                class="bg-navy text-gold rounded-full flex items-center justify-center font-black text-xl border-gold mb-6 size-24 border-8 shadow-2xl"
+              >
+                <span class="material-symbols-outlined scale-150"
+                  >rocket_launch</span
+                >
+              </div>
+              <h5 class="text-navy font-black mb-2">تأكيد الخانة</h5>
+              <p class="text-navy/70 text-sm px-4 font-medium">
+                أرسل الايصال و الاسم و اسم الكورس على الواتساب.
+              </p>
+            </div>
+            <!-- Step 4 -->
+            <div class="relative z-10 flex flex-col items-center">
+              <div
+                class="bg-navy text-gold rounded-full flex items-center justify-center font-black text-xl border-gold mb-6 size-24 border-8 shadow-2xl"
+              >
+                <a
+                  href="https://wa.me/+971543308378"
+                  target="_blank"
+                  class="group inline-flex items-center justify-center"
+                >
+                  <i
+                    class="fa-brands fa-whatsapp text-green-500 text-2xl transition-all duration-300 group-hover:text-green-400 group-hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.6)] group-hover:scale-110"
+                  >
+                  </i>
+                </a>
+              </div>
+              <h5 class="text-navy font-black mb-2">واتساب الان</h5>
+              <p class="text-navy/70 text-sm px-4 font-medium">
+                اضغط هنا لارسال البيانات المطلوبة على الواتساب.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Final CTA / Payment Section -->
+    </main>
+    <footer class="bg-navy border-t border-gold/10 py-12 px-6 reveal-on-scroll">
+      <div
+        class="max-w-7xl mx-auto flex flex-col items-center justify-center gap-8 text-center"
+      >
+        <!-- Logo + Copyright -->
+        <div class="flex flex-col items-center">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <div
+              class="relative flex items-center bg-transparent cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:drop-shadow-2xl"
+              onclick="window.location.href = './course_details.html'"
+            >
+              <img
+                alt="Logo"
+                class="h-20 w-auto object-contain bg-transparent"
+                src="media/logo.png"
+              />
+
+              <!-- Metallic shine overlay -->
+              <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                <div
+                  class="absolute top-0 left-[-50%] w-[200%] h-full bg-gradient-to-r from-transparent via-white/30 to-transparent transform rotate-12 scale-x-0 hover:scale-x-100 transition-transform duration-700 ease-in-out"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-sage/40 text-xs">
+            © 2026 فارس الطاهر. جميع الحقوق محفوظة.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+      const links = document.querySelectorAll(".mobile-link");
+
+      let open = false;
+
+      btn.addEventListener("click", () => {
+        open = !open;
+        menu.classList.toggle("hidden");
+        btn.textContent = open ? "✕" : "☰";
+        document.body.classList.toggle("overflow-hidden", open);
+      });
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          btn.textContent = "☰";
+          document.body.classList.remove("overflow-hidden");
+          open = false;
+        });
+      });
+    </script>
+    <script>
+      window.addEventListener("scroll", () => {
+        const parallax = document.getElementById("hero-bg-parallax");
+        if (parallax) {
+          let scrollPosition = window.pageYOffset;
+          parallax.style.transform =
+            "translateY(" + scrollPosition * 0.4 + "px) scale(1.1)";
+        }
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".menu-slider").forEach((slider) => {
+        const container = slider.parentElement; // get the relative container
+        const nextBtn = container.querySelector(".slider-next");
+        const prevBtn = container.querySelector(".slider-prev");
+
+        const scrollAmount = slider.querySelector("div").clientWidth + 24; // card width + gap
+
+        nextBtn.addEventListener("click", () => {
+          slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+
+        prevBtn.addEventListener("click", () => {
+          slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        });
+
+        // Optional: hide buttons if scroll at edges
+        const updateButtons = () => {
+          prevBtn.style.opacity = slider.scrollLeft <= 0 ? 0.3 : 1;
+          nextBtn.style.opacity =
+            slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5
+              ? 0.3
+              : 1;
+        };
+
+        slider.addEventListener("scroll", updateButtons);
+        updateButtons();
+      });
+    </script>
+    <!-- Parallax + Text Scroll Script -->
+    <script>
+      const heroBg = document.getElementById("hero-bg");
+      const heroText = document.getElementById("hero-text");
+
+      // Animate text fade-in on scroll
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            heroText.classList.remove("opacity-0", "translate-y-12");
+            heroText.classList.add(
+              "opacity-100",
+              "translate-y-0",
+              "transition-all",
+              "duration-1000",
+              "ease-out",
+            );
+          }
+        },
+        { threshold: 0.3 },
+      );
+      observer.observe(heroText);
+
+      window.addEventListener("scroll", () => {
+        const scrollPos = window.scrollY;
+
+        // Parallax background
+        heroBg.style.transform = `translateY(${scrollPos * 0.3}px)`;
+      });
+    </script>
+  </body>
+</html>
